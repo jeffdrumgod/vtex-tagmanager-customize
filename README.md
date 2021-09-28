@@ -173,10 +173,11 @@ No conteúdo deste controle customizado, adicione a chamada de script conforme a
 
 ```html
 <script>
-  window.customDataLayerConfig = {
-    variableName: 'dataLayer',
-    containerId: 'GTM-XXXXXX',
-  };
+  // Se for customizado, descomentar o script abaixo
+  // window.customDataLayerConfig = {
+  //   variableName: 'dataLayer',
+  //   containerId: 'GTM-XXXXXX',
+  // };
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js"></script>
 <script src="/files/tagmanager-customize-head-top.min.js?v=date"></script>
