@@ -1,0 +1,5 @@
+node_modules
+*.log
+dist/arquivos/tagmanager-customize-head-top.min.js.LICENSE.txt
+.awcache
+.DS_Store
