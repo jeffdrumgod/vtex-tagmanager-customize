@@ -215,20 +215,22 @@ No topo, antes de todo script do checkout, deve ser inserido o seguinte trecho d
 
 ```javascript
 /*** START CUSTOM GTM CHECKOUT ***/
-
 (function () {
   var head = document.getElementsByTagName('head')[0];
-  var fnLoad = function (id, url) {
+  var fnLoad = function (id, url, onload) {
     var script = document.createElement('script');
     script.id = id;
     script.type = 'text/javascript';
     script.src = url;
+    script.onload = onload;
     head.appendChild(script);
   };
 
-  fnLoad('polyfill.min.js', 'https://polyfill.io/v3/polyfill.min.js');
-  fnLoad('tagmanager-customize-head-top', '/files/tagmanager-customize-head-top.js?v=date');
-  fnLoad('tagmanager-customize-head-checkout', '/files/tagmanager-customize-head-checkout.js?v=date');
+  fnLoad('polyfill.min.js', 'https://polyfill.io/v3/polyfill.min.js', function() {
+    fnLoad('tagmanager-customize-head-top', '/files/tagmanager-customize-head-top.js?v=date', function() {
+      fnLoad('tagmanager-customize-head-checkout', '/files/tagmanager-customize-head-checkout.js?v=date');
+    });
+  });
 })();
 /*** END CUSTOM GTM CHECKOUT ***/
 ```
