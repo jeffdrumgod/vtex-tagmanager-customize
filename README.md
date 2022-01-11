@@ -4,6 +4,9 @@ Customizações para Tag Manager em lojas Vtex CMS
 
 Aplicação de dataLayer para Enhanced Ecommerce com suporte para Google Analytics versão UA e GA4.
 
+
+Caso você tenha uma loja VTEX e precise de suporte para implementação, entre em contato [por aqui](https://trivod.freshdesk.com/support/tickets/new)
+
 ## Customizações
 
 O projeto foi criado para tentar manter um modelo padrão de trackings para qualquer loja Vtex utilizando modelo CMS.
