@@ -312,7 +312,7 @@ A forma de utilização é a mesma. Essa mudança se deve pelos logs e possívei
 Exemplo de uso:
 
 ```javascript
-window.window.customDataLayer.push({ event: 'foo' });
+window.customDataLayer.push({ event: 'foo' });
 ```
 
 ### .gtmjs
